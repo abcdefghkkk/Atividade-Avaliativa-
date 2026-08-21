@@ -1,313 +1,634 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eliminando o Desperdício de Água</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #f1e8d0,
+                #dff5e8
+            );
+
+            color: #244236;
+        }
 
 
-   <title>Eliminando o Desperdicio da Água </title>
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #176b45,
+                #2e8b57
+            );
+
+            color: white;
+
+            text-align: center;
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 40px 20px;
+
+            border-radius: 0 0 30px 30px;
+
+            box-shadow: 0 6px 15px #176b4555;
+        }
 
 
-   <style>
+        header h1 {
+            font-size: 40px;
+
+            margin: 0 0 12px;
+
+            text-shadow: 2px 2px 4px #0b3d28;
+        }
 
 
-       header {
-           background-color: #000000;
-           color: rgb(242, 244, 247);
-           text-align: center;
-           max-width: 800px;
-           margin: 0 auto;
-           border: 5px solid #0c0303;
-           padding: 16px;
-       }
+        header p {
+            font-size: 20px;
+
+            margin: 0;
+
+            color: #f4f1d3;
+        }
 
 
-       main {
-           background-color: #fdfdfd;
-           color: #160505;
-           max-width: 800px;
-           margin: 0 auto;
-           padding: 16px;
-       }
+        /* CONTEÚDO */
+
+        main {
+            max-width: 1000px;
+
+            margin: 30px auto;
+
+            padding: 10px 20px;
+        }
 
 
-       article {
-           display: flex;
-           margin-bottom: 20px;
-           border: 2px solid #0184ff;
-           padding: 10px;
-       }
+        /* INTRODUÇÃO */
+
+        .introducao {
+            background: #fffdf5;
+
+            padding: 30px;
+
+            margin-bottom: 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            border-top: 6px solid #f4d35e;
+
+            box-shadow: 0 5px 15px #176b4522;
+        }
 
 
-       img {
-           width: 200px;
-           height: 200px;
-       }
+        .introducao h2 {
+            color: #176b45;
+
+            font-size: 28px;
+        }
 
 
-       .autor {
-           font-weight: bold;
-       }
+        .introducao p {
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
 
 
-       button {
-           width: 80px;
-           height: 40px;
-           border: 1px solid #0c0303;
-       }
+        /* ARTIGOS */
+
+        article {
+            display: flex;
+
+            gap: 25px;
+
+            align-items: center;
+
+            background: #fffdf5;
+
+            padding: 20px;
+
+            margin-bottom: 25px;
+
+            border-radius: 20px;
+
+            border-left: 7px solid #7ed6c1;
+
+            box-shadow: 0 5px 15px #176b4522;
+
+            transition: 0.3s;
+        }
 
 
-   </style>
+        article:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 20px #176b4533;
+
+            border-left-color: #f4d35e;
+        }
+
+
+        article img {
+            width: 230px;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 4px solid #7ed6c1;
+
+            flex-shrink: 0;
+        }
+
+
+        article h2 {
+            color: #176b45;
+
+            margin-top: 0;
+
+            font-size: 25px;
+        }
+
+
+        article p {
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        /* AUTOR */
+
+        .autor {
+            font-weight: bold;
+
+            color: #2e8b57;
+
+            font-size: 14px;
+        }
+
+
+        /* DICAS */
+
+        .dica {
+            background: #e8f6ee;
+
+            border-left: 5px solid #2e8b57;
+
+            padding: 12px;
+
+            border-radius: 8px;
+
+            color: #245c43;
+        }
+
+
+        /* BOTÕES */
+
+        button {
+            background: #f4f1d3;
+
+            color: #176b45;
+
+            border: 2px solid #7ed6c1;
+
+            border-radius: 25px;
+
+            padding: 9px 16px;
+
+            margin-right: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.2s;
+        }
+
+
+        button:hover {
+            background: #f4d35e;
+
+            color: #176b45;
+
+            transform: scale(1.08);
+        }
+
+
+        /* RODAPÉ */
+
+        footer {
+            max-width: 1000px;
+
+            margin: auto;
+
+            background: linear-gradient(
+                135deg,
+                #176b45,
+                #0e5134
+            );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+            border-radius: 30px 30px 0 0;
+
+            box-shadow: 0 -5px 15px #176b4533;
+        }
+
+
+        footer h2 {
+            color: #f4d35e;
+
+            font-size: 28px;
+        }
+
+
+        footer p {
+            font-size: 17px;
+        }
+
+
+        /* CELULAR */
+
+        @media (max-width: 700px) {
+
+            article {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            article img {
+                width: 100%;
+
+                height: 250px;
+            }
+
+
+            header h1 {
+                font-size: 30px;
+            }
+
+
+            header p {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
-   <header>
+<header>
 
+    <h1>💧 Eliminando o Desperdício de Água</h1>
 
-       <h1>Eliminando o Desperdício de Água</h1>
+    <p>
+        Pequenas atitudes podem economizar muita água!
+    </p>
 
+</header>
 
-       <p>Pequenas atitudes salvam o nosso planeta!</p>
 
+<main>
 
-   </header>
 
+    <section class="introducao">
 
-   <main>
+        <h2>🌎 Por que economizar água?</h2>
 
+        <p>
+            A água é essencial para a vida. Por isso, precisamos
+            evitar o desperdício e cuidar desse recurso tão importante.
+        </p>
 
-       <article>
+        <p>
+            <strong>💚 Cada gota economizada faz diferença!</strong>
+        </p>
 
+    </section>
 
-           <img src="https://rolimdemoura.ro.gov.br/wp-content/uploads/2024/07/agua.jpg" alt="Água saindo da torneira">
 
+    <!-- TORNEIRA -->
 
-           <div>
+    <article>
 
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn-GKx4oihJiqGhJTBiCm_lOITF9m5IfCztkrcjOUaq7DRCsz6zknisPO8&s=10"
+            alt="Gordão da XJ">
 
-               <h2>Por que precisamos cuidar da água?</h2>
+        <div>
 
+            <h2>🚰 Feche a torneira</h2>
 
-               <p class="autor">Por: Davi Loreto 1º Ano</p>
+            <p class="autor">
+                Por: Davi Loreto - 1º Ano
+            </p>
 
+            <p>
+                Não deixe a torneira aberta enquanto escova os dentes,
+                ensaboa as mãos ou lava a louça.
+            </p>
 
-               <p>A água é essencial para a vida e precisamos evitar seu desperdício.</p>
+            <p class="dica">
+                💡 <strong>Dica:</strong>
+                Abra a torneira somente quando realmente precisar.
+            </p>
 
+            <button>
+                ❤️ <span>0</span>
+            </button>
 
-               <button>❤️<span>0</span></button>
+            <button>
+                💧 <span>0</span>
+            </button>
 
+        </div>
 
-               <button>💧<span>0</span></button>
+    </article>
 
 
-           </div>
+    <!-- BANHO -->
 
+    <article>
 
-       </article>
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAu8AixGtV4txs3UB93CZY_Wwl_2kqSELIqngGwNlsiKFeYBGeUMvac60&s=10"
+            alt="Gordão da XJ">
 
+        <div>
 
+            <h2>🚿 Tome banhos mais rápidos</h2>
 
+            <p class="autor">
+                Por: Davi Loreto - 1º Ano
+            </p>
 
-       <article>
+            <p>
+                Banhos demorados gastam muita água. Diminua o tempo
+                do banho e desligue o chuveiro enquanto estiver se ensaboando.
+            </p>
 
+            <p class="dica">
+                💡 <strong>Dica:</strong>
+                Tente tomar banhos mais rápidos.
+            </p>
 
-           <img src="https://kikacastro.com.br/wp-content/uploads/2012/05/calc3a7ada.png" alt="monica">
+            <button>
+                ❤️ <span>0</span>
+            </button>
 
+            <button>
+                💧 <span>0</span>
+            </button>
 
-           <div>
+        </div>
 
+    </article>
 
-               <h2>Preservar o meio ambiente</h2>
 
+    <!-- REAPROVEITAMENTO -->
 
-               <p class="autor">Por: Davi Loreto 1º Ano</p>
+    <article>
 
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKwllhT_SheD1-u__7lg-gcptS2XhzSYPxbo0qcmFjiFECTU-6LY0kKVON&s=10"
+            alt="Gordão da XJ">
 
-               <p>Todos podemos ajudar a preservar o meio ambiente.</p>
+        <div>
 
+            <h2>🪣 Reaproveite a água</h2>
 
-               <button>❤️<span>0</span></button>
+            <p class="autor">
+                Por: Turma do 1º Ano
+            </p>
 
+            <p>
+                Quando for possível e seguro, podemos reaproveitar
+                água para outras tarefas, como lavar áreas externas
+                e regar plantas.
+            </p>
 
-               <button>💧<span>0</span></button>
+            <p class="dica">
+                💡 <strong>Dica:</strong>
+                Evite desperdiçar água que pode ser reutilizada.
+            </p>
 
+            <button>
+                ❤️ <span>0</span>
+            </button>
 
-           </div>
+            <button>
+                💧 <span>0</span>
+            </button>
 
+        </div>
 
-       </article>
+    </article>
 
 
+    <!-- PLANTAS -->
 
+    <article>
 
-       <article>
+        <img
+            src="https://www.camposnovospaulista.sp.gov.br/admin/globalarq/noticia/noticia/651_366/d7c45cd988a7aafab60febecf8da6bf5.jpeg"
+            alt="macumbinha">
 
+        <div>
 
-           <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="Paisagem">
+            <h2>🌱 Cuide das plantas</h2>
 
+            <p class="autor">
+                Por: Turma do 1º Ano
+            </p>
 
-           <div>
+            <p>
+                Regar as plantas nos horários mais frescos ajuda
+                a diminuir a evaporação da água.
+            </p>
 
+            <p class="dica">
+                💡 <strong>Dica:</strong>
+                Prefira regar pela manhã ou no final da tarde.
+            </p>
 
-               <h2>Pequenas atitudes</h2>
+            <button>
+                ❤️ <span>0</span>
+            </button>
 
+            <button>
+                💧 <span>0</span>
+            </button>
 
-               <p class="autor">Por: Davi Loreto 1º Ano</p>
+        </div>
 
+    </article>
 
-               <p>Pequenas atitudes podem ajudar o nosso planeta.</p>
 
+    <!-- VAZAMENTO -->
 
-               <button>❤️<span>0</span></button>
+    <article>
 
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkfioWv9c7G_uTl1TNhPLmgQUj7YrE47ykq9NFQN-zpQdQNSDmVnAMqSQ&s=10"
+            alt="davi">
 
-               <button>💧<span>0</span></button>
+        <div>
 
+            <h2>🔧 Conserte vazamentos</h2>
 
-           </div>
+            <p class="autor">
+                Por: Turma do 1º Ano
+            </p>
 
+            <p>
+                Uma torneira pingando ou um cano com vazamento
+                pode desperdiçar muita água.
+            </p>
 
-       </article>
+            <p class="dica">
+                💡 <strong>Dica:</strong>
+                Avise um adulto quando encontrar um vazamento.
+            </p>
 
+            <button>
+                ❤️ <span>0</span>
+            </button>
 
+            <button>
+                💧 <span>0</span>
+            </button>
 
+        </div>
 
-       <article>
+    </article>
 
 
-           <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Paisagem natural">
+    <!-- FAÇA SUA PARTE -->
 
+    <article>
 
-           <div>
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJc6-030w5pBvlYVdrpnpfy650s5hD_DLYoNF_Tw-oLJfDKOC0mLqWOhx&s=10"
+            alt="Gordão da XJ">
 
+        <div>
 
-               <h2>O planeta precisa de nós</h2>
+            <h2>🌍 Faça sua parte!</h2>
 
+            <p class="autor">
+                Por: Turma do 1º Ano
+            </p>
 
-               <p class="autor">Por: Turma do 1º Ano</p>
+            <p>
+                Economizar água é uma atitude simples que pode
+                ajudar a proteger o meio ambiente e o futuro do planeta.
+            </p>
 
+            <p class="dica">
+                💡 <strong>Desafio:</strong>
+                Comece hoje a economizar água!
+            </p>
 
-               <p>Cuidar do planeta é responsabilidade de todos.</p>
+            <button>
+                ❤️ <span>0</span>
+            </button>
 
+            <button>
+                💧 <span>0</span>
+            </button>
 
-               <button>❤️<span>0</span></button>
+        </div>
 
+    </article>
 
-               <button>💧<span>0</span></button>
 
+</main>
 
-           </div>
 
+<footer>
 
-       </article>
+    <h2>💛 Cada gota conta!</h2>
 
+    <p>
+        Eliminar o desperdício de água é cuidar da vida e do planeta.
+    </p>
 
+    <p>
+        <strong>Faça sua parte. Economize água!</strong>
+    </p>
 
+</footer>
 
-       <article>
 
+<script>
 
-           <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b" alt="Natureza">
+    const botoes = document.querySelectorAll("button");
 
+    botoes.forEach(function(botao) {
 
-           <div>
+        let curtiu = false;
 
+        botao.addEventListener("click", function() {
 
-               <h2>Um futuro melhor</h2>
+            const texto = botao.querySelector("span");
 
+            if (curtiu === false) {
 
-               <p class="autor">Por: Turma do 1º Ano</p>
+                texto.textContent =
+                    Number(texto.textContent) + 1;
 
+                curtiu = true;
 
-               <p>As nossas escolhas podem ajudar a construir um futuro melhor.</p>
+            } else {
 
+                texto.textContent =
+                    Number(texto.textContent) - 1;
 
-               <button>❤️<span>0</span></button>
+                curtiu = false;
 
+            }
 
-               <button>💧<span>0</span></button>
+        });
 
+    });
 
-           </div>
-
-
-       </article>
-
-
-
-
-       <article>
-
-
-           <img src="https://images.unsplash.com/photo-1448375240586-882707db888b" alt="Floresta">
-
-
-           <div>
-
-
-               <h2>Faça sua parte!</h2>
-
-
-               <p class="autor">Por: Turma do 1º Ano</p>
-
-
-               <p>Comece hoje com pequenas atitudes.</p>
-
-
-               <button>❤️<span>0</span></button>
-
-
-               <button>💧<span>0</span></button>
-
-
-           </div>
-
-
-       </article>
-
-
-   </main>
-
-
-   <script>
-
-
-       const botoes = document.querySelectorAll("button");
-
-
-      botoes.forEach(function (botao) {
-let curtiu = false;
-
-
-botao.addEventListener("click", botaoClicado);
-
-
-function botaoClicado() {
-console.log("fui clicado");
-let texto = botao.querySelector("span");
-
-
-if (curtiu === false) {
-texto.textContent++;
-curtiu = true;
-} else {
-texto.textContent--;
-curtiu = false;
-}
-}
-});
-
-
-   </script>
+</script>
 
 
 </body>
-
 
 </html>
